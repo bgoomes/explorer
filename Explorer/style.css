@@ -1,0 +1,190 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --ff-heading: 'Epilogue', sans-serif;
+    --bg-primary: #28293e;
+    --fc-primaty: #fff;
+    --fc-secundary: #BBB3E5;
+
+    font-size: 62.5%;
+
+}
+
+body{
+    background-color: var(--bg-primary);
+    color: var(--fc-primaty);
+}
+
+header{
+    font-family: var(--ff-heading);
+    text-align: center;
+    animation-name: topdown;
+    animation-duration: 900ms;
+
+}
+
+header h1{
+    font-size: 4rem;
+    font-weight: 800;
+    line-height: 4.8rem;
+    margin: 0 0 80px;
+}
+
+header p {
+    color: var(--fc-secundary);
+    text-transform: uppercase;
+    font-size: 1.6rem;
+    line-height: 32px;
+    letter-spacing: 3px;
+    margin: 106px 0 17px;
+}
+
+main{
+    display: grid;
+    gap: 3.2rem;
+
+    animation: downtop 900ms 350ms backwards;
+}
+
+.app{
+    max-width: 33rem;
+    margin: 0 auto;
+}
+
+@media (min-width: 700px){
+
+    .app{
+        max-width: 117rem;
+        padding: 0 5rem;
+    }
+
+    main {
+        grid-template-areas: "Area1 Area2 Area2" 
+        "Area3 Area3 Area4";
+    }
+
+    main div:nth-child(1){
+        grid-area: Area1;
+    }
+
+    main div:nth-child(2){
+        grid-area: Area2;
+    }
+    main div:nth-child(3){
+        grid-area: Area3;
+    }
+    main div:nth-child(4){
+        grid-area: Area4;
+    }
+
+    header h1{
+        font-size: 5.6rem;
+    }
+}
+
+.card{
+    position: relative;
+    font-family: var(--ff-heading);
+}
+
+.card h2{
+    position: absolute;
+    bottom: 5.2rem;
+    left: 2.8rem;
+
+    font-size: 4rem;
+    font-family: var(--ff-heading);
+    font-weight: 800;
+    display: flex;
+    flex-direction: column;
+    gap: 2.8rem;
+
+}
+
+.card h2 span{
+    border-radius: 2rem;
+    background-color: #fff;
+    font-weight: 400;
+    color: #090039;
+    line-height: 3.2rem;
+    font-size: 1.6rem;
+
+    padding: 0 1.6rem;
+    width: fit-content;
+    height: 3.8rem;
+
+    display: inline-flex;
+    align-items: center;
+}
+
+img{
+    width: 100%;
+    height: auto;
+}
+
+.card img{
+    height: 41.6rem;
+    object-fit: cover;
+    border-radius: 6px;
+    transition: all 400ms;
+}
+
+.card img:hover{
+    transform: scale(1.1);
+    opacity: 0.4;
+}
+
+
+
+@keyframes topdown {
+    0% {
+        opacity: 0;
+        transform: translateY(-15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes downtop {
+    0% {
+        opacity: 0;
+        transform: translateY(15px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
